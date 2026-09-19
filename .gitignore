@@ -1,0 +1,32 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Helper generator scripts (excluded from repository)
+create_notebook.py
+create_session2_notebooks.py
+
+# Uncompressed reference FASTA (tracked via compressed chr17.fa.gz ~25MB)
+References/chr17.fa
+
+# Large raw sequencing reads (>100MB GitHub limit)
+Samples/*.fastq.gz
+
+# Dynamic output results
+Results/QC/*
+!Results/QC/.gitkeep
+Results/Align/*
+!Results/Align/.gitkeep
+Results/Deduplication/*
+!Results/Deduplication/.gitkeep
+Results/Stats/*
+!Results/Stats/.gitkeep
+Results/Coverage/*
+!Results/Coverage/.gitkeep
+Results/Variants/*
+!Results/Variants/.gitkeep
+Results/CNV/*
+!Results/CNV/.gitkeep
+Results/Fusion/*
+!Results/Fusion/.gitkeep
