@@ -10,9 +10,6 @@ create_session2_notebooks.py
 # Uncompressed reference FASTA (tracked via compressed chr17.fa.gz ~25MB)
 References/chr17.fa
 
-# Large raw sequencing reads (>100MB GitHub limit)
-Samples/*.fastq.gz
-
 # Dynamic output results
 Results/QC/*
 !Results/QC/.gitkeep

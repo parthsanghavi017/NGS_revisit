@@ -358,4 +358,3 @@ dependencies:
       - reportlab==5.0.1
       - scikit-learn==1.7.2
       - threadpoolctl==3.6.0
-prefix: /home/parth/miniconda3/envs/strvar_cnv

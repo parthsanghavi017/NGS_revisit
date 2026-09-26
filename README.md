@@ -9,7 +9,7 @@ Welcome to the comprehensive, hands-on teaching materials for Next-Generation Se
 To allow seamless execution on laptop and workstation environments without sacrificing human genomic structure:
 - **Reference Genome**: Reduced to Chromosome 17 ([`References/chr17.fa`](References/chr17.fa), ~81 MB).
 - **Target Capture BED**: Filtered to Chromosome 17 target exons ([`References/Target_regions_chr17.bed`](References/Target_regions_chr17.bed), 16,233 capture windows).
-- **Input Read Pairs**: Compact paired FASTQs ([`Samples/SRR7890850_1.fastq.gz`](Samples/SRR7890850_1.fastq.gz) & [`Samples/SRR7890850_2.fastq.gz`](Samples/SRR7890850_2.fastq.gz), ~876 MB total), extracted directly from real human exome sequencing data mapped to `chr17`.
+- **Input Read Pairs**: Compact paired FASTQs ([`Samples/SRR7890850_1.fastq.gz`](Samples/SRR7890850_1.fastq.gz) & [`Samples/SRR7890850_2.fastq.gz`](Samples/SRR7890850_2.fastq.gz), ~46 MB each / ~92 MB total), extracted directly from real human exome sequencing data mapped to `chr17`.
 
 ---
 
@@ -50,12 +50,26 @@ conda activate strvar_fus
 python -m ipykernel install --user --name strvar_fus --display-name "Python 3 (strvar_fus)"
 ```
 
-### 4. Launch Jupyter Lab
-Start the interactive Jupyter Lab server from the repository root:
+### 4. Activate Environment & Launch Jupyter Lab
+Activate the Conda environment corresponding to the specific experiment/session you are running, then launch `jupyter lab` directly from within that environment:
 
-```bash
-jupyter lab
-```
+- **For Section 1 (ShortVar Secondary Analysis)**:
+  ```bash
+  conda activate shortvar_sec
+  jupyter lab
+  ```
+
+- **For Section 2a (Copy Number Variation - CNVkit)**:
+  ```bash
+  conda activate strvar_cnv
+  jupyter lab
+  ```
+
+- **For Section 2b (Gene Fusions - GeneFuse)**:
+  ```bash
+  conda activate strvar_fus
+  jupyter lab
+  ```
 
 In Jupyter Lab, select the corresponding kernel (**`Python 3 (shortvar_sec)`**, **`Python 3 (strvar_cnv)`**, or **`Python 3 (strvar_fus)`**) for each notebook.
 
@@ -126,8 +140,8 @@ NGS_Revisit/
 │       ├── cancer.hg38.csv                # Cancer Gene Fusion Library
 │       └── druggable.hg38.csv             # Druggable Gene Fusion Library
 ├── Samples/                               # Compact Sample Input Reads
-│   ├── SRR7890850_1.fastq.gz              # Paired Read 1 (432 MB)
-│   └── SRR7890850_2.fastq.gz              # Paired Read 2 (444 MB)
+│   ├── SRR7890850_1.fastq.gz              # Paired Read 1 (46 MB)
+│   └── SRR7890850_2.fastq.gz              # Paired Read 2 (47 MB)
 └── Results/                               # Clean Output Subdirectories
     ├── QC/                                # FastP Reports & Trimmed Reads
     ├── Align/                             # Sorted BAM Files

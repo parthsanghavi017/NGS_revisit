@@ -349,4 +349,3 @@ dependencies:
   - zipp=4.1.0
   - zlib-ng=2.3.3
   - zstd=1.5.7
-prefix: /home/parth/miniconda3/envs/strvar_fus
